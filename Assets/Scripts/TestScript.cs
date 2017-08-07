@@ -18,10 +18,10 @@ public class TestScript : MonoBehaviour {
         // Update is called once per frame
         void Update ()
         {
-        CreateClock();
+        
         }
 
-        void CreateClock()
+        public void CreateClock()
         {
             DateTime currentTime = DateTime.Now;
             hour = currentTime.Hour.ToString();
