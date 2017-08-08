@@ -10,6 +10,7 @@ public class TestScript : MonoBehaviour {
         public Camera cam;
         public Dropdown options;
         public Slider fovSlider;
+        public InputField userText;
         string hour;
         string minute;
         string second;
@@ -71,6 +72,11 @@ public class TestScript : MonoBehaviour {
             default: break;
                    
             }
+        }
+
+        public void InputField()
+        {
+            text.text = userText.text;
         }
 
 
