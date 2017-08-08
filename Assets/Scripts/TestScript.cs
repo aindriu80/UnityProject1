@@ -8,6 +8,7 @@ public class TestScript : MonoBehaviour {
         public Text text;
         public bool toggle;
         public Camera cam;
+        public Dropdown options;
         public Slider fovSlider;
         string hour;
         string minute;
@@ -43,9 +44,35 @@ public class TestScript : MonoBehaviour {
             else toggle = true;
         }
 
-    public void FOVslider()
-    {
-        cam.fieldOfView = fovSlider.value;
-    }
+        public void FOVslider()
+        {
+            cam.fieldOfView = fovSlider.value;
+        }
+
+        public void Options()
+        {
+            switch (options.value)
+            {
+                case 0:
+                {
+                    transform.localScale = new Vector3(1f,1f,1f);
+                }
+                break;
+                case 1:
+                {
+                    transform.localScale = new Vector3(3f, 3f, 3f);
+                }   
+                break;
+                case 2:
+                {
+                    transform.localScale = new Vector3(5f, 5f, 5f);
+                }
+                break;
+            default: break;
+                   
+            }
+        }
+
+
     }
 
