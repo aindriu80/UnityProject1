@@ -7,6 +7,8 @@ public class TestScript : MonoBehaviour {
         
         public Text text;
         public bool toggle;
+        public Camera cam;
+        public Slider fovSlider;
         string hour;
         string minute;
         string second;
@@ -15,6 +17,7 @@ public class TestScript : MonoBehaviour {
         void Start ()
         {
             toggle = false;
+            cam.fieldOfView = fovSlider.value;
         }
 	
         // Update is called once per frame
@@ -39,5 +42,10 @@ public class TestScript : MonoBehaviour {
             if (toggle) toggle = false;
             else toggle = true;
         }
+
+    public void FOVslider()
+    {
+        cam.fieldOfView = fovSlider.value;
+    }
     }
 
