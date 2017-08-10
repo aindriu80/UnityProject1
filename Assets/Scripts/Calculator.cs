@@ -23,28 +23,28 @@ public class Calculator : MonoBehaviour
 
     public void Add()
     {
-        int number1 = int.Parse(inputField1.text);
-        int number2 = int.Parse(inputField2.text);
+        float number1 = float.Parse(inputField1.text);
+        float number2 = float.Parse(inputField2.text);
         resultText.text = (number1 + number2).ToString();
     }
 
     public void Subtract()
     {
-        int number1 = int.Parse(inputField1.text);
-        int number2 = int.Parse(inputField2.text);
+        float number1 = float.Parse(inputField1.text);
+        float number2 = float.Parse(inputField2.text);
         resultText.text = (number1 - number2).ToString();
     }
     public void Multiply()
     {
-        int number1 = int.Parse(inputField1.text);
-        int number2 = int.Parse(inputField2.text);
+        float number1 = float.Parse(inputField1.text);
+        float number2 = float.Parse(inputField2.text);
         resultText.text = (number1 * number2).ToString();
     }
     public void Divide()
     {
-        int number1 = int.Parse(inputField1.text);
-        int number2 = int.Parse(inputField2.text);
-        resultText.text = (number1 / number2).ToString();
+        float number1 = float.Parse(inputField1.text);
+        float number2 = float.Parse(inputField2.text);
+        resultText.text = (number1 / number2).ToString("#.00");
     }
 
 
