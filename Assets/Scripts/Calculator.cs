@@ -34,4 +34,18 @@ public class Calculator : MonoBehaviour
         int number2 = int.Parse(inputField2.text);
         resultText.text = (number1 - number2).ToString();
     }
+    public void Multiply()
+    {
+        int number1 = int.Parse(inputField1.text);
+        int number2 = int.Parse(inputField2.text);
+        resultText.text = (number1 * number2).ToString();
+    }
+    public void Divide()
+    {
+        int number1 = int.Parse(inputField1.text);
+        int number2 = int.Parse(inputField2.text);
+        resultText.text = (number1 / number2).ToString();
+    }
+
+
 }
