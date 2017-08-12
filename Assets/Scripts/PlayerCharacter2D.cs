@@ -19,6 +19,12 @@ public class PlayerCharacter2D : MonoBehaviour
     private void Update()
     {
         Movement();
+        if (isGrounded) anim.SetBool("isGrounded",true);
+        else anim.SetBool("isGrounded", false);
+        if (rig.velocity.y < 0)
+        {
+            rig.velocity += Vector2.up * Physics2D.gravity.y * 2 * Time.deltaTime;
+        }
     }
 
     private void Movement()
@@ -50,6 +56,9 @@ public class PlayerCharacter2D : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ground")
+        {
             isGrounded = true;
+            anim.SetBool("isGrounded", true);
+        }
     }
 }

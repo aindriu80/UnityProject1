@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 559577079}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,11 +214,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8af12f1594ee1c4f8891abd102077ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  sr: {fileID: 559577075}
   anim: {fileID: 559577078}
   jumpForce: 400
   rig: {fileID: 559577074}
+  speed: 10
+  sr: {fileID: 559577075}
 --- !u!95 &559577078
 Animator:
   serializedVersion: 3
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 579396400}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
