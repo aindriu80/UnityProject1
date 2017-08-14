@@ -10,6 +10,10 @@ public class PlayerCharacter2D : MonoBehaviour
     private bool shotTimer;
     public int speed;
     public SpriteRenderer sr;
+    public Transform positionLeft;
+    public Transform positionRight;
+    public GameObject bullet;
+    public float shotSpeed;
 
     // Use this for initialization
     private void Start()
@@ -42,6 +46,18 @@ public class PlayerCharacter2D : MonoBehaviour
         if (Input.GetMouseButton(0))
             if (!shotTimer)
             {
+                if (!sr.flipX)
+                {
+                    GameObject newBullet = Instantiate(bullet, positionLeft.position, transform.rotation);
+                    newBullet.GetComponent<Rigidbody2D>().velocity = Vector2.right * -shotSpeed;
+                }
+                else
+                {
+                   GameObject newBullet = Instantiate(bullet, positionRight.position, transform.rotation);
+                    newBullet.GetComponent<Rigidbody2D>().velocity = Vector2.right* shotSpeed;
+                }
+
+                
                 anim.SetBool("isShooting", true);
                 shotTimer = true;
             }
